@@ -13,13 +13,11 @@ socket.bind("tcp://*:5556")
 
 gamelanguage = str
 
-def start(gamelanguage):
+def reactorstartup():
     cpi = int(100)
     spi = int(100)
     sti = int(100)
     fpa = int(100)
-
-    gamelanguage = gamelanguage
 
     clear = lambda: os.system('cls')
 
