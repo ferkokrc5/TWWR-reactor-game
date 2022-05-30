@@ -27,20 +27,23 @@ def reactorstartup():
         if tickfreq == 1:
             cpi = cpi - 1
             stype = "c4"
-            smsg = "cpi" + {cpi}
+            smsg = "cpi" + str(cpi)
         if tickfreq == 2:
             spi = spi - 1
             stype = "c5"
-            smsg = "spi" + {spi}
+            smsg = "spi" + str(spi)
         if tickfreq == 3:
             sti = sti - 1
             stype = "c5"
-            smsg = "sti" + {sti}
+            smsg = "sti" + str(sti)
         if tickfreq == 4:
             fpa = fpa - 1
             stype = "c2"
-            smsg = "fpa" + {fpa}
+            smsg = "fpa" + str(fpa)
         socket.send_string(f"{stype} {smsg}") 
         print(f"Coolant pipe integrity: {cpi}%\nSteam pipe integrity: {spi}%\nSteam turbine integrity: {sti}%\nFuel pellets amount: {fpa}%")
         time.sleep(5)
+
+
+reactorstartup()
 
