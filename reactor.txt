@@ -1,0 +1,29 @@
+Systems:
+Coolant system - pumps, pipes. manages the flow of coolant into the reactor. error: reactor temperature starts to rise  (energy dependent)
+pump broken 1211
+pipes blown (coolant pipe integrity)1222
+pipes damaged (coolant pipe integrity)1223
+Fuel system - fuel input. manages the flow of fuel into the reactor. error: reactor slows down, eventual shutdown
+fuel burnout (change fuel)1314
+wrong material inserted Fatal substance in reactor (meltdown)1357
+Network system - terminals, control panels. connects all terminals into the computer core. error: system lockout (energy dependent)
+network error 2334
+Energy system - backup generators. backup generators to power the systems during a blackout. error: no backup energy source
+generator malfunction 3447
+Reactor core - reactor, control rods. turns water into steam.
+reactor meltdown 6669
+tritium pileup 7802
+reactor poisoning 3068
+Conversion system - turbines, pipes. turns steam into energy. error: energy flow stops from the reactor (reactor dependent)
+pipes damaged (steam pipe integrity) 1589
+pipes blown (steam pipe integrity)1599
+turbines damaged (turbine integrity) 1405
+turbines broken (turbine integrity)1435
+
+freqtick (runs on 5 second clock)
+Coolant pipe integrity
+Steam pipe integrity
+Steam turbine integrity
+Fuel pellets amount
+
+raretick (runs on clock)
