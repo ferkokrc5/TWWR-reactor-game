@@ -11,6 +11,8 @@ socket.bind("tcp://*:5556")
 # smsg = input("msg:")
 # socket.send_string(f"{stype} {smsg}") 
 
+clear = lambda: os.system('cls')
+
 gamelanguage = str
 
 def reactorstartup():
@@ -19,28 +21,30 @@ def reactorstartup():
     sti = int(100)
     fpa = int(100)
 
-    clear = lambda: os.system('cls')
-
     while True:
         clear()
         tickfreq = random.randint(1,4)
         if tickfreq == 1:
             cpi = cpi - 1
             stype = "c4"
-            smsg = "cpi" + str(cpi)
+            smsg = str(cpi)
+            msgt = "cpi"
         if tickfreq == 2:
             spi = spi - 1
             stype = "c5"
-            smsg = "spi" + str(spi)
+            smsg = str(spi)
+            msgt = "spi"
         if tickfreq == 3:
             sti = sti - 1
             stype = "c5"
-            smsg = "sti" + str(sti)
+            smsg = str(sti)
+            msgt = "sti"
         if tickfreq == 4:
             fpa = fpa - 1
             stype = "c2"
-            smsg = "fpa" + str(fpa)
-        socket.send_string(f"{stype} {smsg}") 
+            smsg = str(fpa)
+            msgt = "fpa"
+        socket.send_string(f"{stype} {smsg} {msgt}") 
         print(f"Coolant pipe integrity: {cpi}%\nSteam pipe integrity: {spi}%\nSteam turbine integrity: {sti}%\nFuel pellets amount: {fpa}%")
         time.sleep(5)
 
